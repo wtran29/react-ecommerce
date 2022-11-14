@@ -7,27 +7,27 @@ const Home = () => {
   const categories = [
     {
       "id": 1,
-      "title": "hats",
+      "title": "HATS",
       "imageUrl": "https://i.ibb.co/YN8tWR5/categories-hats.jpg"
     },
     {
       "id": 2,
-      "title": "jackets",
+      "title": "JACKETS",
       "imageUrl": "https://i.ibb.co/CB1L00V/categories-jackets.jpg"
     },
     {
       "id": 3,
-      "title": "sneakers",
+      "title": "SNEAKERS",
       "imageUrl": "https://i.ibb.co/YWMvkL7/categories-sneakers.jpg"
     },
     {
       "id": 4,
-      "title": "womens",
+      "title": "WOMENS",
       "imageUrl": "https://i.ibb.co/Gcy4MjS/categories-womens.jpg"
     },
     {
       "id": 5,
-      "title": "mens",
+      "title": "MENS",
       "imageUrl": "https://i.ibb.co/wW4Rjrt/categories-mens.jpg"
     }
   ];

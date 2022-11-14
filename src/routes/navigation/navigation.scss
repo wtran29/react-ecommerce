@@ -1,0 +1,46 @@
+.nav {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    margin-bottom: 25px;
+    
+    
+
+    .logo-container {
+      height: 100%;
+      width: 70px;
+      padding: 15px;
+    //   display: inline;
+
+      .logo {
+        width: 130%;
+        height: 130%;
+      }
+      
+    }
+    .nav-title {
+        display: flex;
+        // align-items: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-family: 'Julius Sans One';
+        padding-top: 5px;
+
+        .nav-links {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            
+  
+            .nav-link {
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+        }
+      }
+    
+  }
+  
