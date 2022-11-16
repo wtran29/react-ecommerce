@@ -3,6 +3,7 @@ import { createAuthUserWithEmailAndPassword, createUserDocFromAuth } from "../..
 import FormInput from "../form-input/form-input";
 import Button from "../button/button";
 
+
 import './register-form.scss';
 
 const defaultFormFields = {
@@ -15,7 +16,7 @@ const defaultFormFields = {
 const RegisterForm = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { displayName, email, password, confirmPassword } = formFields;
-    console.log(formFields);
+
 
     const resetFormFields = () => {
         setFormFields(defaultFormFields)
@@ -24,19 +25,20 @@ const RegisterForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if(password != confirmPassword) {
+        if(password !== confirmPassword) {
             alert("Passwords do not match!");
             return;
         }
 
         try{
             const {user} = await createAuthUserWithEmailAndPassword(email, password);
+
             await createUserDocFromAuth(user, {displayName});
             resetFormFields();
             
         }
         catch(err){
-            if(err.code == 'auth/email-already-in-use'){
+            if(err.code === 'auth/email-already-in-use'){
                 alert('This email is already in use.')
             }
             console.log('user creation encountered error', err);
