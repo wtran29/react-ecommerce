@@ -8,27 +8,27 @@ const Home = () => {
     {
       "id": 1,
       "title": "HATS",
-      "imageUrl": "https://i.ibb.co/YN8tWR5/categories-hats.jpg"
+      "imageUrl": "https://i.ibb.co/grBbZyC/categories-hats.jpg"
     },
     {
       "id": 2,
       "title": "JACKETS",
-      "imageUrl": "https://i.ibb.co/CB1L00V/categories-jackets.jpg"
+      "imageUrl": "https://i.ibb.co/xX8Pj9Q/categories-jackets.jpg"
     },
     {
       "id": 3,
       "title": "SNEAKERS",
-      "imageUrl": "https://i.ibb.co/YWMvkL7/categories-sneakers.jpg"
+      "imageUrl": "https://i.ibb.co/FwVkkzd/categories-sneakers.jpg"
     },
     {
       "id": 4,
       "title": "WOMENS",
-      "imageUrl": "https://i.ibb.co/Gcy4MjS/categories-womens.jpg"
+      "imageUrl": "https://i.ibb.co/ZKSW2b1/categories-womens.jpg"
     },
     {
       "id": 5,
       "title": "MENS",
-      "imageUrl": "https://i.ibb.co/wW4Rjrt/categories-mens.jpg"
+      "imageUrl": "https://i.ibb.co/0XYKGjM/categories-mens.jpg"
     }
   ];
 
