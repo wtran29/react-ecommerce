@@ -14,6 +14,10 @@ import {
     doc,
     getDoc, // get doc data
     setDoc, // set doc data
+    collection, 
+    writeBatch,
+    query,
+    getDocs,
 } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -38,6 +42,33 @@ const firebaseConfig = {
   export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
   export const db = getFirestore();
+
+  export const addCollectionAndDocs = async (collectionKey, objectsToAdd) => {
+    const collectionRef = collection(db, collectionKey);
+    const batch = writeBatch(db);
+
+    objectsToAdd.forEach((object)=>{
+      const docRef = doc(collectionRef, object.title.toLowerCase());
+      batch.set(docRef, object);
+    });
+
+    await batch.commit();
+    console.log('done');
+  }
+
+  export const getCategoriesAndDocs = async () => {
+    const collectionRef = collection(db, 'categories');
+    const q = query(collectionRef);
+
+    const querySnapshot = await getDocs(q);
+    const categoryMap = querySnapshot.docs.reduce((accumulate, docSnapshot)=>{
+      const { title, items } = docSnapshot.data();
+      accumulate[title.toLowerCase()] = items;
+      return accumulate;
+    }, {});
+
+    return categoryMap;
+  }
 
   export const createUserDocFromAuth = async (userAuth, additionalInfo = {}) => {
     if (!userAuth) return;
