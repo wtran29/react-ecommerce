@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
 
-import '../../components/directory/category-list.scss';
+import '../../components/directory/category-list.styles.jsx';
 import CategoryList from '../../components/directory/category-list';
 
 const Home = () => {

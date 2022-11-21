@@ -5,7 +5,7 @@
 import RegisterForm from '../../components/register/register-form';
 import LoginForm from '../../components/login/login-form';
 
-import './authentication.scss';
+import { AuthContainer } from './authentication.styles';
 
 
 const Authentication = () => {
@@ -20,14 +20,14 @@ const Authentication = () => {
    
     return (
         // <h1>Sign In Page</h1>
-        <div className='auth-container'>
+        <AuthContainer>
             
             <LoginForm />
             <RegisterForm />
             {/* <button onClick={signInWithGoogleRedirect}>
                 Sign in with Google Redirect
             </button> */}
-        </div>
+        </AuthContainer>
     )
 }
 
