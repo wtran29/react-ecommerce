@@ -1,10 +1,10 @@
 import './category-list.scss';
-import CategoryItem from '../category-item/category-item';
+import HomeCategoryItem from '../home-category-item/home-category-item';
 
 const CategoryList = ({ categories }) => (
     <div className='category-list'>
         {categories.map((category) => {
-            return <CategoryItem key={category.id} category={category} />
+            return <HomeCategoryItem key={category.id} category={category} />
         })}
     </div>
 );
