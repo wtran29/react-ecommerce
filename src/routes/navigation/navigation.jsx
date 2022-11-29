@@ -1,9 +1,12 @@
 import { Fragment, useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import { ReactComponent as BGLogo } from '../../assets/bg-head1.svg';
-import { UserContext } from "../../contexts/user";
+// import { UserContext } from "../../contexts/user";
 import { CartContext } from "../../contexts/cart";
+
+import { selectCurrentUser } from "../../store/user/user-selector";
 
 import { signOutUser } from "../../utils/firebase/firebase";
 
@@ -15,8 +18,10 @@ import { NavigationContainer, LogoContainer, Logo, NavTitle, NavLinks, NavLink }
 // import './navigation.scss';
 
 const Nav = () => {
-    const { currentUser } = useContext(UserContext);
+    // const { currentUser } = useContext(UserContext);
     // console.log(currentUser);
+
+    const currentUser = useSelector(selectCurrentUser);
     const { isCartOpen } = useContext(CartContext);
     
     return (

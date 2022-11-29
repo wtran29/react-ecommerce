@@ -8,7 +8,6 @@ const Home = () => {
 
 return (
     <div className="App">
-        
       <CategoryList/>
       <Outlet />
     </div>
